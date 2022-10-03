@@ -143,11 +143,26 @@ class SimplifiedTile:
     def __init__(self, name:str, sockets:List[str,str,str,str]):
         self.name = name
         self.sockets = sockets
+        self.connections: List[List[str]] = []
     
     def connects(self, other) -> List[bool,bool,bool,bool]:
         return [
-            self.sockets[0] == other.sockets[0][::-1],
-            self.sockets[1] == other.sockets[1][::-1],
-            self.sockets[2] == other.sockets[2][::-1],
-            self.sockets[3] == other.sockets[3][::-1],
+            self.sockets[0] == other.sockets[2][::-1],
+            self.sockets[1] == other.sockets[3][::-1],
+            self.sockets[2] == other.sockets[0][::-1],
+            self.sockets[3] == other.sockets[1][::-1],
         ]
+
+    def asDict(self):
+        obj = {
+            'name':self.name,
+            'sockets':self.sockets,
+            'connections': [[],[],[],[]]
+        }
+
+        for i,connection in enumerate(self.connections):
+            for tile in connection:
+                number = int(tile.name.split('_')[1][:-4])
+                obj['connections'][i].append(number)
+        
+        return obj
