@@ -1,0 +1,639 @@
+{
+   "colors": [
+      {
+         "A": [
+            112,
+            109,
+            92
+         ]
+      },
+      {
+         "B": [
+            18,
+            220,
+            55
+         ]
+      },
+      {
+         "C": [
+            215,
+            198,
+            96
+         ]
+      }
+   ],
+   "tiles": [
+      {
+         "name": "tile_0.png",
+         "sockets": [
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBBBBB"
+         ]
+      },
+      {
+         "name": "tile_1.png",
+         "sockets": [
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBBBBB",
+            "BBBBBBB"
+         ]
+      },
+      {
+         "name": "tile_2.png",
+         "sockets": [
+            "BBBBBBB",
+            "BBBBBBB",
+            "BBBBBBB",
+            "BBBCBBB"
+         ]
+      },
+      {
+         "name": "tile_3.png",
+         "sockets": [
+            "BBBBBBB",
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBBBBB"
+         ]
+      },
+      {
+         "name": "tile_4.png",
+         "sockets": [
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBBBBB"
+         ]
+      },
+      {
+         "name": "tile_5.png",
+         "sockets": [
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBBBBB"
+         ]
+      },
+      {
+         "name": "tile_6.png",
+         "sockets": [
+            "BBBCBBB",
+            "BBBCBBB",
+            "BBBCBBB",
+            "BBBBBBB"
+         ]
+      },
+      {
+         "name": "tile_7.png",
+         "sockets": [
+            "BBBCBBB",
+            "BBBCBBB",
+            "BBBCBBB",
+            "BBBBBBB"
+         ]
+      },
+      {
+         "name": "tile_8.png",
+         "sockets": [
+            "BBBCBBB",
+            "BBBCBBB",
+            "BBBCBBB",
+            "BBBBBBB"
+         ]
+      },
+      {
+         "name": "tile_9.png",
+         "sockets": [
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBCBBB"
+         ]
+      },
+      {
+         "name": "tile_10.png",
+         "sockets": [
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBCBBB"
+         ]
+      },
+      {
+         "name": "tile_11.png",
+         "sockets": [
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBCBBB"
+         ]
+      },
+      {
+         "name": "tile_12.png",
+         "sockets": [
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBBBBB"
+         ]
+      },
+      {
+         "name": "tile_13.png",
+         "sockets": [
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBCBBB"
+         ]
+      },
+      {
+         "name": "tile_14.png",
+         "sockets": [
+            "BBBBBBB",
+            "BBBBBBB",
+            "BBBBBBB",
+            "BBBCBBB"
+         ]
+      },
+      {
+         "name": "tile_15.png",
+         "sockets": [
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBBBBB"
+         ]
+      },
+      {
+         "name": "tile_16.png",
+         "sockets": [
+            "BBBBBBB",
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBBBBB"
+         ]
+      },
+      {
+         "name": "tile_17.png",
+         "sockets": [
+            "BBBCBBB",
+            "BBBCBBB",
+            "BBBCBBB",
+            "BBBBBBB"
+         ]
+      },
+      {
+         "name": "tile_18.png",
+         "sockets": [
+            "BBBCBBB",
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBCBBB"
+         ]
+      },
+      {
+         "name": "tile_19.png",
+         "sockets": [
+            "BBBBBBB",
+            "BBBBBBB",
+            "BBBBBBB",
+            "BBBCBBB"
+         ]
+      },
+      {
+         "name": "tile_20.png",
+         "sockets": [
+            "BBBCBBB",
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBBBBB"
+         ]
+      },
+      {
+         "name": "tile_21.png",
+         "sockets": [
+            "BBBCBBB",
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBCBBB"
+         ]
+      },
+      {
+         "name": "tile_22.png",
+         "sockets": [
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBCBBB"
+         ]
+      },
+      {
+         "name": "tile_23.png",
+         "sockets": [
+            "BBBBBBB",
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBCBBB"
+         ]
+      },
+      {
+         "name": "tile_24.png",
+         "sockets": [
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBBBBB"
+         ]
+      },
+      {
+         "name": "tile_25.png",
+         "sockets": [
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBCBBB"
+         ]
+      },
+      {
+         "name": "tile_26.png",
+         "sockets": [
+            "BBBCBBB",
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBCBBB"
+         ]
+      },
+      {
+         "name": "tile_27.png",
+         "sockets": [
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBBBBB"
+         ]
+      },
+      {
+         "name": "tile_28.png",
+         "sockets": [
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBCBBB"
+         ]
+      },
+      {
+         "name": "tile_29.png",
+         "sockets": [
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBBBBB",
+            "BBBBBBB"
+         ]
+      },
+      {
+         "name": "tile_30.png",
+         "sockets": [
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBBBBB",
+            "BBBBBBB"
+         ]
+      },
+      {
+         "name": "tile_31.png",
+         "sockets": [
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBCBBB"
+         ]
+      },
+      {
+         "name": "tile_32.png",
+         "sockets": [
+            "BBBCBBB",
+            "BBBCBBB",
+            "BBBCBBB",
+            "BBBCBBB"
+         ]
+      },
+      {
+         "name": "tile_33.png",
+         "sockets": [
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBCBBB"
+         ]
+      },
+      {
+         "name": "tile_34.png",
+         "sockets": [
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBBBBB"
+         ]
+      },
+      {
+         "name": "tile_35.png",
+         "sockets": [
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBCBBB"
+         ]
+      },
+      {
+         "name": "tile_36.png",
+         "sockets": [
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBBBBB"
+         ]
+      },
+      {
+         "name": "tile_37.png",
+         "sockets": [
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBCBBB",
+            "BBBCBBB"
+         ]
+      },
+      {
+         "name": "tile_38.png",
+         "sockets": [
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBCBBB",
+            "BBBCBBB"
+         ]
+      },
+      {
+         "name": "tile_39.png",
+         "sockets": [
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBCBBB",
+            "BBBBBBB"
+         ]
+      },
+      {
+         "name": "tile_40.png",
+         "sockets": [
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBCBBB"
+         ]
+      },
+      {
+         "name": "tile_41.png",
+         "sockets": [
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBBBBB"
+         ]
+      },
+      {
+         "name": "tile_42.png",
+         "sockets": [
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBBBBB",
+            "BBBCBBB"
+         ]
+      },
+      {
+         "name": "tile_43.png",
+         "sockets": [
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBCBBB"
+         ]
+      },
+      {
+         "name": "tile_44.png",
+         "sockets": [
+            "BBBBBBB",
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBBBBB"
+         ]
+      },
+      {
+         "name": "tile_45.png",
+         "sockets": [
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBBBBB"
+         ]
+      },
+      {
+         "name": "tile_46.png",
+         "sockets": [
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBBBBB"
+         ]
+      },
+      {
+         "name": "tile_47.png",
+         "sockets": [
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBCBBB",
+            "BBBCBBB"
+         ]
+      },
+      {
+         "name": "tile_48.png",
+         "sockets": [
+            "BBBBBBB",
+            "BBBBBBB",
+            "BBBBBBB",
+            "BBBCBBB"
+         ]
+      },
+      {
+         "name": "tile_49.png",
+         "sockets": [
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBBBBB"
+         ]
+      },
+      {
+         "name": "tile_50.png",
+         "sockets": [
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBBBBB"
+         ]
+      },
+      {
+         "name": "tile_51.png",
+         "sockets": [
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBBBBB",
+            "BBBCBBB"
+         ]
+      },
+      {
+         "name": "tile_52.png",
+         "sockets": [
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBCBBB"
+         ]
+      },
+      {
+         "name": "tile_53.png",
+         "sockets": [
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBCBBB"
+         ]
+      },
+      {
+         "name": "tile_54.png",
+         "sockets": [
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBCBBB"
+         ]
+      },
+      {
+         "name": "tile_55.png",
+         "sockets": [
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBCBBB",
+            "BBBCBBB"
+         ]
+      },
+      {
+         "name": "tile_56.png",
+         "sockets": [
+            "BBBBBBB",
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBBBBB"
+         ]
+      },
+      {
+         "name": "tile_57.png",
+         "sockets": [
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBBBBB",
+            "BBBBBBB"
+         ]
+      },
+      {
+         "name": "tile_58.png",
+         "sockets": [
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBCBBB",
+            "BBBBBBB"
+         ]
+      },
+      {
+         "name": "tile_59.png",
+         "sockets": [
+            "BBBCBBB",
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBCBBB"
+         ]
+      },
+      {
+         "name": "tile_60.png",
+         "sockets": [
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBBBBB"
+         ]
+      },
+      {
+         "name": "tile_61.png",
+         "sockets": [
+            "BBBBBBB",
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBBBBB"
+         ]
+      },
+      {
+         "name": "tile_62.png",
+         "sockets": [
+            "BBBCBBB",
+            "BBBCBBB",
+            "BBBCBBB",
+            "BBBCBBB"
+         ]
+      },
+      {
+         "name": "tile_63.png",
+         "sockets": [
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBBBBB",
+            "BBBBBBB"
+         ]
+      },
+      {
+         "name": "tile_64.png",
+         "sockets": [
+            "BBBBBBB",
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBCBBB"
+         ]
+      },
+      {
+         "name": "tile_65.png",
+         "sockets": [
+            "BBBCBBB",
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBBBBB"
+         ]
+      },
+      {
+         "name": "tile_66.png",
+         "sockets": [
+            "BBBBBBB",
+            "BBBBBBB",
+            "BBBBBBB",
+            "BBBCBBB"
+         ]
+      },
+      {
+         "name": "tile_67.png",
+         "sockets": [
+            "BBBCBBB",
+            "BBBBBBB",
+            "BBBCBBB",
+            "BBBBBBB"
+         ]
+      }
+   ]
+}
