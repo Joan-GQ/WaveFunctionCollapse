@@ -1,4 +1,5 @@
 from __future__ import annotations
+from ast import Dict
 from numpy import outer
 
 from webcolors import hex_to_rgb, CSS3_HEX_TO_NAMES
@@ -11,6 +12,43 @@ from fmatrix import Matrix
 from matplotlib import pyplot as plt
 from collections import deque
 from base64 import b64encode
+import random
+import numpy as np
+
+# TODO: Move this to fmatrix
+########################################################################
+
+def get_image(n:int):
+    return load_image(f'./tiles-new/tile_{n}.png')
+
+def display_matrix(m:Matrix):
+    size = m.size
+    canvas = Image.new(size=(7*size,7*size), mode='RGB')
+    for i in range(0,size):
+        for j in range(0,size):
+            canvas.paste(get_image(m[j,i]), (i*7,j*7))
+    plt.grid(False)
+    plt.imshow(canvas)
+
+def save_matrix(n:int, m:Matrix):
+    with open(f'./progress/state-{n}.py','w') as fp:
+        fp.write(str(m.rows()).replace('], ','],\n '))
+        
+    size = m.size
+    canvas = Image.new(size=(7*size,7*size), mode='RGB')
+    for i in range(0,size):
+        for j in range(0,size):
+            canvas.paste(get_image(m[j,i]), (i*7,j*7))
+    
+    canvas.save(f'./progress/state-{n}.png')
+
+def find_matrix_center(matrix:Matrix):
+    if matrix.size % 2 != 0:
+        return (matrix.size//2,)*2
+    else:
+        raise Exception("Non odd sized matrix")
+
+########################################################################
 
 def ib64(n:int):
     return b64encode(f'{abs(n):02x}'.encode()).decode().upper().replace('=','')
@@ -166,3 +204,127 @@ class SimplifiedTile:
                 obj['connections'][i].append(number)
         
         return obj
+
+
+class Board:
+    def __init__(self, tile_options:List[Dict]):
+        # TODO: Change fixed size of 5x5
+        self.__m__ = np.tile(-1, (5,5)).tolist()
+        self.__m__ = Matrix(self.__m__)
+        self.__options__ = tile_options
+    
+    def global_decision_space(self) -> List[int]:
+        return list(range(len(self.__options__)))
+    
+    def cell_decision_space(self, pos:Tuple[int,int]) -> List[Set[int]]:
+        if pos[0] not in range(self.__m__.size) or pos[1] not in range(self.__m__.size):
+            cell = -1
+        else:
+            cell = self.__m__[pos]
+
+        if cell == -1:
+            return [set(self.global_decision_space()),
+                    set(self.global_decision_space()),
+                    set(self.global_decision_space()),
+                    set(self.global_decision_space())]
+
+        up_decision    = self.__options__[cell]['connections'][0]
+        right_decision = self.__options__[cell]['connections'][1]
+        down_decision  = self.__options__[cell]['connections'][2]
+        left_decision  = self.__options__[cell]['connections'][3]
+
+        up_decision    = set(up_decision)
+        right_decision = set(right_decision)
+        down_decision  = set(down_decision)
+        left_decision  = set(left_decision)
+
+        return [up_decision, right_decision, down_decision, left_decision]
+    
+    def local_decision_space(self, pos:Tuple[int,int]) -> Set[int]:
+        y, x = pos
+        up_pos    = (y-1, x+0)
+        right_pos = (y+0, x+1)
+        down_pos  = (y+1, x+0)
+        left_pos  = (y+0, x-1)
+
+        down_neighbour_constraint  = self.cell_decision_space(pos=down_pos)[0]
+        left_neighbour_constraint  = self.cell_decision_space(pos=left_pos)[1]
+        up_neighbour_constraint    = self.cell_decision_space(pos=up_pos)[2]
+        right_neighbour_constraint = self.cell_decision_space(pos=right_pos)[3]
+
+        lds = set(self.global_decision_space())
+        lds &= down_neighbour_constraint
+        lds &= left_neighbour_constraint
+        lds &= up_neighbour_constraint
+        lds &= right_neighbour_constraint
+
+        return lds
+
+
+    def collapse(self, pos:Tuple[int,int], decision_space:List[int]=None):
+        if pos[0] not in  range(self.__m__.size) or pos[1] not in range(self.__m__.size):
+            raise Exception("Invalid position")
+
+        cell = self.__m__[pos]
+
+        if cell != -1: # Collapsed cell
+            return self
+        else: # Uncollapsed cell
+            #choice = random.choice(decision_space)
+            if decision_space == None:
+                choice = random.choice(list(self.local_decision_space(pos)))
+            else:
+                choice = random.choice(list(decision_space))
+            
+            self.__m__.setAt(pos = pos,
+                            n    = choice)
+            return self
+
+    @DeprecationWarning
+    def collapse_center(self, initial_decisions:List[int]):
+        #return self.collapse(pos = find_matrix_center(self.__m__), decision_space = initial_decisions)
+        pos = find_matrix_center(self.__m__)
+        if pos[0] > self.__m__.size or pos[1] > self.__m__.size:
+            raise Exception("Invalid position")
+
+        cell = self.__m__[pos]
+
+        if cell != -1: # Collapsed cell
+            return self
+        else: # Uncollapsed cell
+            #choice = random.choice(decision_space)
+            choice = random.choice(initial_decisions)
+            self.__m__.setAt(pos = pos,
+                            n    = choice)
+            return self
+    
+    @DeprecationWarning
+    def collapse_neighbours(self, pos:Tuple[int,int]):
+        cell = self.__m__[pos]
+        if cell == -1:
+            raise Exception("Cannot collapse neighbours of non-collapsed cell.")
+        
+        # TODO: fix fmatrix reverse coordinates
+        y, x = pos
+        up_pos    = (y-1, x+0)
+        right_pos = (y+0, x+1)
+        down_pos  = (y+1, x+0)
+        left_pos  = (y+0, x-1)
+
+        # up_decision    = self.__options__[cell]['connections'][0]
+        # right_decision = self.__options__[cell]['connections'][1]
+        # down_decision  = self.__options__[cell]['connections'][2]
+        # left_decision  = self.__options__[cell]['connections'][3]
+
+        up_decision    = self.local_decision_space(up_pos)
+        right_decision = self.local_decision_space(right_pos)
+        down_decision  = self.local_decision_space(down_pos)
+        left_decision  = self.local_decision_space(left_pos)
+
+        self.collapse(pos=up_pos,    decision_space = up_decision)
+        self.collapse(pos=right_pos, decision_space = right_decision)
+        self.collapse(pos=down_pos,  decision_space = down_decision)
+        self.collapse(pos=left_pos,  decision_space = left_decision)
+        return self
+    
+
