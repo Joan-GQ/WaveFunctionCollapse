@@ -5,3 +5,9 @@ Inspired by the original ![WaveFunctionCollapse algorithm](https://github.com/mx
 In the Maxim Gumin's implementation, the tiles are given a _symmetry label_  to each tile in the tile set, that indicates the valid connections to each side. However, this project presents an alternative method to generate the adjacency rules using the individual colors of the tiles' edges.
 
 ![](./assets/preview/progress.gif)
+
+#
+
+<p align="center">
+  <img src="./assets/preview/5151.gif" alt="animated" />
+</p>
